@@ -1,12 +1,13 @@
 package com.example.config;
 
-import com.example.entities.*;
+import com.example.entities.BaseballGame;
+import com.example.entities.Game;
+import com.example.entities.Team;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import javax.sql.DataSource;
 import java.text.NumberFormat;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @Configuration
 @ComponentScan(basePackages = "com.example")
+@EnableAspectJAutoProxy
 public class AppConfig {
     @Autowired
     private DataSource dataSource;
